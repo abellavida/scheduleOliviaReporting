@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+       <form action="" class="reprtlist">
+           <p class="reprtlist">Please Press the "Get My Report" button, <br>after 5 minutes your report should generate</p>
+           <input type="hidden" id="url" class="reprtlist">
+           <button type = "submit" formmethod="post" id="submitURL" class="reprtlist">Get My Report</button>
+        </form>
+    {%  for message in get_flashed_messages() %}
+   <h1> {{ message }}</h1>
+   {% endfor %}
+    <!--img src="/static/MickeyBook.gif"-->
+   <br><br><br>
+
+{% endblock %}

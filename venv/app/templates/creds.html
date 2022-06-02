@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <br>
+        <h1>Credentials</h1><br>
+        <a>UserID: {{ uid }}</a><br>
+        <a>Secret Key: {{ sk }}</a><br>
+        <a>Account ID: {{ aid }}</a><br><br>
+    <table class="reprtlist">
+        <form method="post">
+        <td class="reprtlist">
+        <h2 class="reprtlist">Updated Credential Values:</h2>
+            <p class="reprtlist">New User ID: <input type = "text" name="NewUserID"></p>
+            <p class="reprtlist">New Secret Key: <input type = "text" name="NewSecretKey"></p>
+            <p class="reprtlist">New Account ID: <input type = "text" name="NewAccountID"></p>
+        </td>
+        <td><input type = "submit" value = "Submit"></td>
+    </form>
+
+
+{% endblock %}

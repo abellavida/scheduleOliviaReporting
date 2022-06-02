@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!--a class='reprtlist' href="{{ url_for( 'schedcanddetails' )}}">Scheduling Candidate Detail</a-->
+    <h2 class="reprtlist">Select Report</h2>
+        <h3 class="reprtlist"><table class="reprtlist">
+            <form class="reprtlist" action="" method="POST">
+          <td class="reprtlist">
+            <select class="reprtlist" name="report" >
+            {% for report in report_list %}
+            <option class="reprtlist" value="{{ report }}" SELECTED>{{ report }}</option>
+            {% endfor %}
+            </select>
+              <br><br>
+            <h2 class="reprtlist">Select Report Dates:</h2>
+            <p class="reprtlist">Start Date:<input type = "date" name="StartDate"></p>
+            <p class="reprtlist">End Date:<input type = "date" name="EndDate"></p>
+          </td>
+            <td><p><input class="reprtlist"type = "submit" value = "submit"></p></td>
+        </form>
+        </table>
+        </h3>
+
+{% endblock %}
